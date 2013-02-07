@@ -1,0 +1,14 @@
+<form name="form">
+    <notification type="error" on="form.username.$error.required">Please fill out the field Username</notification>
+    <notification type="error" on="confirmpassword != newpassword || newpassword == undefined">Passwords don't match</notification>
+    <notification type="success" on="confirmpassword == newpassword && newpassword != undefined">Passwords match</notification>
+
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" required>
+
+    <label for="password">Password:</label>
+    <input type="text" name="password" id="password" required>
+
+    <input type="submit" value="Login"/>
+</form>
+

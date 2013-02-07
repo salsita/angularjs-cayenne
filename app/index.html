@@ -2,23 +2,27 @@
 <html lang="en" ng-app="cayenne">
 <head>
     <meta charset="utf-8">
-    <title>First AngularJS Cayenne Example</title>
+    <title>AngularJS Cayenne</title>
     <link rel="stylesheet" type="text/css" href="css/app.css"/>
 </head>
 <body>
 
-    <div class="header">Header</div>
-    <div class="container" ng-view></div>
-    <div class="footer">Footer</div>
+    <div ng-include="'partials/notification/notification.html'"></div>
 
-  <script src="lib/angular/angular.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
-  <script src="js/notification/notification-ctrl.js"></script>
-  <script src="js/notification/notification-service.js"></script>
-  <script src="js/notification/notification-directives.js"></script>
+    <div class="header">
+        <div class="menu">
+            <a href='#/page1'>Change Password</a>
+            <a href="#/page2">Login</a>
+        </div>
+    </div>
+    <div class="container" ng-view></div>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

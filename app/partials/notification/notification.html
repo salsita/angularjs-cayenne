@@ -29,9 +29,9 @@
     <div class="notifications">
         <div class="notification" ng-repeat="notification in notifications">
             <div ng-switch on="notification.severity">
-                <div ng-switch-when="success" class="notification-success">{{ notification.message }}</div>
-                <div ng-switch-when="alert" class="notification-alert">{{ notification.message }}</div>
-                <div ng-switch-when="error" class="notification-error">{{ notification.message }}</div>
+                <div ng-switch-when="success"  ng-show="notification.display" class="notification-success">{{ notification.message }}</div>
+                <div ng-switch-when="alert"  ng-show="notification.display" class="notification-alert">{{ notification.message }}</div>
+                <div ng-switch-when="error" ng-show="notification.display" class="notification-error">{{ notification.message }}</div>
             </div>
         </div>
     </div>
