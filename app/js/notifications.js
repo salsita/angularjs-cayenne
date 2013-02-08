@@ -28,6 +28,8 @@
                         display: true
                     };
                 }
+
+                $rootScope.notifications[index].display = true;
             }
         }
 
