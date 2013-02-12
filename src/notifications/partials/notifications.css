@@ -1,0 +1,24 @@
+.notifications {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.notification {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.notification-success {
+    background-color: green;
+}
+
+.notification-alert {
+    background-color: yellow;
+}
+
+.notification-error {
+    background-color: red;
+}

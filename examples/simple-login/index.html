@@ -1,18 +1,19 @@
 <!doctype html>
-<html lang="en" ng-app="cayenne">
+<html lang="en" ng-app="simple-login">
 <head>
     <meta charset="utf-8">
     <title>AngularJS Cayenne</title>
     <link rel="stylesheet" type="text/css" href="css/app.css"/>
+    <link rel="stylesheet" type="text/css" href="../../src/notifications/partials/notifications.css"/>
 </head>
 <body>
 
-    <div ng-include="'partials/notification/notification.html'"></div>
+    <div ng-include="'../../src/notifications/partials/notifications.html'"></div>
 
     <div class="header">
         <div class="menu">
-            <a href='#/page1'>Change Password</a>
-            <a href="#/page2">Login</a>
+            <a href='#/changePassword'>Change Password</a>
+            <a href="#/login">Login</a>
         </div>
     </div>
     <div class="container" ng-view></div>
@@ -22,7 +23,7 @@
     <script src="js/controllers.js"></script>
     <script src="js/filters.js"></script>
     <script src="js/directives.js"></script>
-    <script src="js/notifications.js"></script>
+    <script src="../../src/notifications/js/notifications.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
