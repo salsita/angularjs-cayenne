@@ -2,7 +2,7 @@
     "use strict";
 
     ng.module('notifications', []).
-    service('notification', function($rootScope) {
+    service('notifications', function($rootScope) {
         var mapping = {};
 
         if(!$rootScope.notifications) {
@@ -51,7 +51,7 @@
             mapping = {};
         };
     }).
-    directive('notification', function(notification) {
+    directive('notification', function(notifications) {
       return {
           restrict: 'E',
           link: function(scope, element, attrs) {
@@ -66,9 +66,9 @@
             function watchFunc(newValue, oldValue) {
               console.log(watchExpr, newValue);
               if(newValue) {
-                  notification[notificationType](notificationText);
+                  notifications[notificationType](notificationText);
               } else {
-                  notification.hide(notificationText);
+                  notifications.hide(notificationText);
               }
             }
 
@@ -79,7 +79,7 @@
           }
         };
     }).
-    controller('notification', function ($scope, $rootScope) {
+    controller('notificationController', function ($scope, $rootScope) {
 
         // Keep notification messages aligned with $rootScope
         $rootScope.$watch('notifications', function(newValue) {
