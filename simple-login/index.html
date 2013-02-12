@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" ng-app="simple-login">
+<head>
+    <meta charset="utf-8">
+    <title>AngularJS Cayenne</title>
+    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/notifications/partials/notifications.css"/>
+</head>
+<body>
+
+    <div ng-include="'lib/notifications/partials/notifications.html'"></div>
+
+    <div class="header">
+        <div class="menu">
+            <a href='#/changePassword'>Change Password</a>
+            <a href="#/login">Login</a>
+        </div>
+    </div>
+    <div class="container" ng-view></div>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="lib/notifications/js/notifications.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
