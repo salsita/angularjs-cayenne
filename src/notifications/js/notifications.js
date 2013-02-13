@@ -54,15 +54,13 @@
     directive('notification', function(notifications) {
       return {
           restrict: 'E',
-          link: function(scope, element, attrs) {
+          compile: function(element, attrs, transclude) {
             var el = element[0];
+            el.style.display = 'none';
             var watchExpr = attrs.on;
             var notificationType = attrs.type;
             var notificationText = el.innerHTML;
 
-            /*
-             *
-             */
             function watchFunc(newValue, oldValue) {
               console.log(watchExpr, newValue);
               if(newValue) {
@@ -72,12 +70,13 @@
               }
             }
 
-            // execute
-            el.style.display = 'none';
-            scope.$watch(watchExpr, watchFunc);
-            console.log(watchExpr, scope.$eval(watchExpr));
+            return function(scope, element, attrs) {
+                // execute
+                scope.$watch(watchExpr, watchFunc);
+                console.log(watchExpr, scope.$eval(watchExpr));
+            }
           }
-        };
+      }
     }).
     controller('notificationController', function ($scope, $rootScope) {
 
