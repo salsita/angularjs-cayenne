@@ -33,19 +33,24 @@ describe('notifications directives', function() {
         expect(rootScope.notifications.length > 0).toEqual(true);
     });
 
-    it('should change @display property if expression is true', function() {
+    it('should set @display property to true if expression is true', function() {
         $compile('<notification type="error" on="$blabla == 1">Error1</notification>')(scope);
         scope.$blabla = 1;
+        
         rootScope.$digest();
+
         expect(rootScope.notifications[0].display).toEqual(true);
     });
 
 
-    it('should change @display property if expression is false', function() {
+    it('should set @display property to false if expression is false', function() {
         $compile('<notification type="error" on="$blabla == 1">Error1</notification>')(scope);
+
         rootScope.$digest();
+
         scope.$blabla = 0;
         scope.$digest();
+
         expect(rootScope.notifications[0].display).toEqual(false);
     });
 });
