@@ -53,4 +53,23 @@ describe('notifications directives', function() {
 
         expect(rootScope.notifications[0].display).toEqual(false);
     });
+
+    it('should be three notifications of various types in $rootScope', function() {
+        $compile('<notification type="error" on="$blabla == 1">Error1</notification>')(scope);
+        $compile('<notification type="alert" on="$blabla == 1">Error2</notification>')(scope);
+        $compile('<notification type="success" on="$blabla == 1">Error3</notification>')(scope);
+
+        rootScope.$digest();
+
+        expect(rootScope.notifications.length).toEqual(3);
+        expect(rootScope.notifications.filter(function(el) {
+            return el.severity == 'error'
+        }).length).toEqual(1);
+        expect(rootScope.notifications.filter(function(el) {
+            return el.severity == 'alert'
+        }).length).toEqual(1);
+        expect(rootScope.notifications.filter(function(el) {
+            return el.severity == 'success'
+        }).length).toEqual(1);
+    });
 });
