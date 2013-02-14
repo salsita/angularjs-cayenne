@@ -62,7 +62,6 @@
             var notificationText = el.innerHTML;
 
             function watchFunc(newValue, oldValue) {
-              console.log(watchExpr, newValue);
               if(newValue) {
                   notifications[notificationType](notificationText);
               } else {
@@ -73,7 +72,6 @@
             return function(scope, element, attrs) {
                 // execute
                 scope.$watch(watchExpr, watchFunc);
-                console.log(watchExpr, scope.$eval(watchExpr));
             }
           }
       }
