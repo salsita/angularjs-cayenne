@@ -29,7 +29,7 @@
                     } catch(e) {}
 
                     if(value) {
-                        scope.$apply(scope[key] = value);
+                        scope[key] = value;
                     }
 
                     scope.$$$persistHistory[key] = true;
