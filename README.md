@@ -49,16 +49,31 @@ Examples:
 
 ### Service
 
-Cayenne provides `notifications` service with 4 methods:
+Cayenne provides `notifications` module with `notifications` service with 4 methods:
 
  * success(message) - show success notification
  * alert(message) - show alert notification
  * error(message) - show error notification
  * reset() - clear all messages
 
+## Persisting scope variable
+
+Persisting means that scope variable will be stored in `localStorage` and after every change the value will be updated.
+
+You might persist scope variable in two ticks:
+
+ * load `persist` module with `persistService`
+ * call `persistService($scope, key, prefix)`:
+  * $scope {Object} Scope
+  * variable {String} Name of variable within $scope
+  * prefix {String} Optional: prefix for key in localStorage for not to intefere with the others
 
 
-
+Example:
+    
+    controller('loginController', function($scope, $rootScope, persistService){
+      persistService.persist($scope, 'username');
+    });
 
 
 
