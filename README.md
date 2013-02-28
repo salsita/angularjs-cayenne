@@ -59,6 +59,7 @@ Cayenne provides `notifications` module with `notifications` service with 4 meth
 ## Persisting scope variable
 
 Persisting means that scope variable will be stored in `localStorage` and after every change the value will be updated.
+Also the value is automatically restored after loading.
 
 You might persist scope variable in two ticks:
 
