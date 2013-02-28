@@ -1,0 +1,22 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.header {
+    margin-top: 100px;
+}
+
+label {
+    display: block;
+}
+
+input[type="submit"] {
+    display: block;
+}
+
+.container {
+    padding: 8px;
+}

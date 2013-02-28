@@ -1,0 +1,15 @@
+<form name="form">
+    <notification type="error" on="form.username.$error.required">Please fill out the field Username</notification>
+    <notification type="error" on="form.password.$error.required">Please fill out the field Password</notification>
+    <notification type="success" on="!form.password.$error.required">Field Password is not empty</notification>
+    <notification type="success" on="!form.username.$error.required">Field Username is not empty</notification>
+
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" ng-model="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" ng-model="password" required>
+
+    <input type="submit" value="Login"/>
+</form>
+
