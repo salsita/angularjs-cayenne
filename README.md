@@ -14,6 +14,7 @@ List of notifications is cleared after page changing. There are three types of n
  * alert
  * error
 
+[(link)](http://nikolaykhodov.github.com/angularjs-cayenne/simple-login/index.html#/changePassword)
 ![Notifications](https://lh5.googleusercontent.com/-PR4hhG4yyYI/US5odDqWfAI/AAAAAAAAAZw/ijEgDTsq_Dc/s720/notifications.png)
 
 ### How to use
