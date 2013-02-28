@@ -63,7 +63,7 @@ Persisting means that scope variable will be stored in `localStorage` and after 
 You might persist scope variable in two ticks:
 
  * load `persist` module with `persistService`
- * call `persistService($scope, key, prefix)`:
+ * call `persistService.persist($scope, key, prefix)`:
   * $scope {Object} Scope
   * variable {String} Name of variable within $scope
   * prefix {String} Optional: prefix for key in localStorage for not to intefere with the others
