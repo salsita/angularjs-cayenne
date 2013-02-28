@@ -1,6 +1,6 @@
 # angularjs-cayenne
 
-This projects provides several extensions to AngularJS to give instruments with pretty simple API for:
+This projects provides several tools for AngularJS:
 
 1. in-page notifications
 2. persisting scope variables in localStorage
