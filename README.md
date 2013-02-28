@@ -79,7 +79,7 @@ Example:
 
 ## Testing
 
-We love (Testacular)[http://testacular.github.com/] and to run tests execute simple command:
+We love [Testacular](http://testacular.github.com/) and to run tests execute simple command:
 
     testacular start ./test/testacular.conf.js 
 
