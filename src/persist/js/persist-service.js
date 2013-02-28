@@ -25,7 +25,7 @@
                     var value = null;
 
                     try {
-                        value = JSON.parse(localStorage.getItem(name));
+                        value = ng.fromJSON(localStorage.getItem(name));
                     } catch(e) {}
 
                     if(value) {
@@ -36,7 +36,7 @@
                 }
 
                 scope.$watch(key, function(newValue) {
-                    localStorage.setItem(name, JSON.stringify(newValue));
+                    localStorage.setItem(name, ng.toJSON(newValue));
                 }, true);
            }
        };
